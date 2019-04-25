@@ -1,0 +1,12 @@
+{
+    "name": "kulikovroman/brain-games",
+    "authors": [
+        {
+            "name": "Roman Kulikov",
+            "email": "texasultra@mail.ru"
+        }
+    ],
+    "bin": [
+        "bin/brain-games"
+    ]
+}
