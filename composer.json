@@ -7,12 +7,20 @@
         }
     ],
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games.php"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
     },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
     "autoload": {
-        "files": ["src/Cli"]
+        "files": [ 
+            "src/Cli.php"
+        ]
+    },
+    "scripts": {
+        "phpcs": "phpcs"
     }
 }
