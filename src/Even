@@ -1,0 +1,34 @@
+<?php
+
+namespace BrainGames\Even;
+
+use function \cli\line;
+use function \cli\prompt;
+
+function brainEven() 
+{
+    line('Welcome to the Brain Game!');
+    line('Answer "yes" if number even otherwise answer "no".');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name); 
+
+    $count = 3; // кол-во правильных ответов для победы
+
+    for($i = 0; $count > $i ; $i++) {
+        $rundomNumber = rand(1, 99);
+        line('Question: %s', $rundomNumber); 
+        $userAnswer = prompt('Your answer');
+         
+        if (($rundomNumber % 2 == 0) && ($userAnswer == 'yes')) {
+            line('Correct!');
+        }elseif (($rundomNumber % 2 != 0) && ($userAnswer == 'no')) {
+            line('Correct!');
+        }elseif (($rundomNumber % 2 == 0) && ($userAnswer == 'no')) {
+            return line("'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, %s!", $name);
+        }elseif (($rundomNumber % 2 != 0) && ($userAnswer == 'yes')) {
+            return line("'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, %s!", $name);
+        }else {
+            return line("Let's try again, %s!", $name);
+        }
+    } return line('Congratulations, %s!', $name);
+}
