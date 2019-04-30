@@ -1,0 +1,40 @@
+<?php
+
+namespace BrainGames\Gcd;
+
+use function \cli\line;
+use function \cli\prompt;
+
+function brainGcd() 
+{
+    line('Welcome to the Brain Game!');
+    line('Find the greatest common divisor of given numbers.');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name); 
+
+    $count = 3; // кол-во правильных ответов для победы
+
+    for($i = 0; $count > $i ; $i++) {
+        $randNum1 = rand(1, 99);
+        $randNum2 = rand(1, 99);
+        $minRandNum = min($randNum1, $randNum2);
+        $result = 0;
+        
+        //Поиск НОД для двух случайных чисел
+        for($y = $minRandNum; $y > 0; $y--) {
+            if(($randNum1 % $y === 0) && ($randNum2 % $y === 0)) {
+                $result = $y;
+                break;
+            }
+        }
+
+        line("Question: {$randNum1} {$randNum2}");
+        $userAnswer = prompt('Your answer');
+
+        if ($result == $userAnswer) {
+            line('Correct!');
+        } else {
+            return line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$result}'. Let's try again!");
+        }
+    } return line('Congratulations, %s!', $name);
+}

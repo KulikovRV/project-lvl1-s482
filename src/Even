@@ -14,17 +14,17 @@ function brainEven()
 
     $count = 3; // кол-во правильных ответов для победы
     for($i = 0; $count > $i ; $i++) {
-        $rundomNumber = rand(1, 99);
-        line('Question: %s', $rundomNumber); 
+        $randNum = rand(1, 99);
+        line('Question: %s', $randNum); 
         $userAnswer = prompt('Your answer');
          
-        if (($rundomNumber % 2 == 0) && ($userAnswer == 'yes')) {
+        if (($randNum % 2 == 0) && ($userAnswer == 'yes')) {
             line('Correct!');
-        } elseif (($rundomNumber % 2 != 0) && ($userAnswer == 'no')) {
+        } elseif (($randNum % 2 != 0) && ($userAnswer == 'no')) {
             line('Correct!');
-        } elseif (($rundomNumber % 2 == 0) && ($userAnswer == 'no')) {
+        } elseif (($randNum % 2 == 0) && ($userAnswer == 'no')) {
             return line("'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, %s!", $name);
-        } elseif (($rundomNumber % 2 != 0) && ($userAnswer == 'yes')) {
+        } elseif (($randNum % 2 != 0) && ($userAnswer == 'yes')) {
             return line("'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, %s!", $name);
         } else {
             return line("Let's try again, %s!", $name);

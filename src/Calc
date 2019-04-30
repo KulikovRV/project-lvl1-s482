@@ -11,6 +11,7 @@ function brainCalc()
     line('What is the result of the expression?');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name); 
+
     $count = 3; // кол-во правильных ответов для победы
 
     for($i = 0; $count > $i ; $i++) {
