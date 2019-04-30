@@ -19,7 +19,8 @@
     "autoload": {
         "files": [ 
             "src/Cli",
-            "src/Even"
+            "src/Even",
+            "src/Calc"
         ]
     },
     "scripts": {
