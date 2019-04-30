@@ -8,6 +8,9 @@ game demonstration 'brain-even'
 game demonstration 'brain-calc'
 [![asciicast](https://asciinema.org/a/fW9Gm7stZst018riD56GCWpK8.svg)](https://asciinema.org/a/fW9Gm7stZst018riD56GCWpK8)
 
+game demonstration 'brain-gcd'
+[![asciicast](https://asciinema.org/a/r88O9Bw6sxSj7YVyVjEaMhlT2.svg)](https://asciinema.org/a/r88O9Bw6sxSj7YVyVjEaMhlT2)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/4c85d10ecca380b25630/maintainability)](https://codeclimate.com/github/KulikovRV/project-lvl1-s482/maintainability)
 
 [![Build Status](https://travis-ci.org/KulikovRV/project-lvl1-s482.svg?branch=master)](https://travis-ci.org/KulikovRV/project-lvl1-s482)
