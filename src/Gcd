@@ -34,7 +34,7 @@ function brainGcd()
         if ($result == $userAnswer) {
             line('Correct!');
         } else {
-            return line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$result}'. Let's try again!");
+            return line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$result}'. Let's try again %s!", $name);
         }
     } return line('Congratulations, %s!', $name);
 }
