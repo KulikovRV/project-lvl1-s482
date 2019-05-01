@@ -1,5 +1,12 @@
 {
     "name": "kulikovroman/brain-games",
+    "description": "Few 'brain' games for console",
+    "type": "library",
+    "keywords": [
+        "php",
+        "hexlet",
+        "brain-games"
+    ],
     "authors": [
         {
             "name": "Roman Kulikov",
@@ -23,11 +30,11 @@
     "autoload": {
         "files": [ 
             "src/Cli",
-            "src/Even",
-            "src/Calc",
-            "src/Gcd",
-            "src/Progression",
-            "src/Prime"
+            "src/Games/Even",
+            "src/Games/Calc",
+            "src/Games/Gcd",
+            "src/Games/Progression",
+            "src/Games/Prime"
         ]
     },
     "scripts": {
