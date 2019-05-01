@@ -11,6 +11,9 @@ game demonstration 'brain-calc'
 game demonstration 'brain-gcd'
 [![asciicast](https://asciinema.org/a/r88O9Bw6sxSj7YVyVjEaMhlT2.svg)](https://asciinema.org/a/r88O9Bw6sxSj7YVyVjEaMhlT2)
 
+game demonstration 'brain-progression'
+[![asciicast](https://asciinema.org/a/uSTl34nsbheuEc7kuC5EkiIht.svg)](https://asciinema.org/a/uSTl34nsbheuEc7kuC5EkiIht)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/4c85d10ecca380b25630/maintainability)](https://codeclimate.com/github/KulikovRV/project-lvl1-s482/maintainability)
 
 [![Build Status](https://travis-ci.org/KulikovRV/project-lvl1-s482.svg?branch=master)](https://travis-ci.org/KulikovRV/project-lvl1-s482)
