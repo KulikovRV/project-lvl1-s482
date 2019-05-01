@@ -1,0 +1,33 @@
+<?php
+
+namespace BrainGames\Progression;
+
+use function \cli\line;
+use function \cli\prompt;
+
+function brainProgression() 
+{
+    line('Welcome to the Brain Game!');
+    line('What number is missing in the progression?');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name); 
+
+    $count = 3; // кол-во правильных ответов для победы
+
+    for ($i = 0; $count > $i ; $i++) {
+        $arithmeticProgression = [5, 7, 9, 11, 13, 15, 17, 19, 21, 23];
+        $randNum = rand(0, 9);
+        $result = $arithmeticProgression[$randNum]; // сохраняем правильный ответ
+        $arithmeticProgression[$randNum] = ".."; // Прячем число для игрока
+        $arrayToString = implode(", ", $arithmeticProgression); // Преобразуем массив в строку для правилного вывода на экран для игрока
+
+        line("Question: {$arrayToString}");
+        $userAnswer = prompt('Your answer');
+
+        if ($userAnswer == $result) {
+            line('Correct!');
+        } else {
+            return line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$result}'. Let's try again, %s!", $name);
+        }    
+    } return line('Congratulations, %s!', $name);
+}
