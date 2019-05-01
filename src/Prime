@@ -1,0 +1,40 @@
+<?php
+
+namespace BrainGames\Prime;
+
+use function \cli\line;
+use function \cli\prompt;
+
+function brainPrime()
+{
+    line('Welcome to the Brain Game!');
+    line('What number is missing in the progression?');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name); 
+
+    $count = 3; // кол-во правильных ответов для победы
+
+    for($i = 0; $count > $i ; $i++) {
+        $randNum = rand(3, 99); // Это число игрок должен определить, как простое или нет.
+        $result = '';
+        
+        //Алгорим определения простого числа, делим выпавшее число на все варианты за исключением единицы и самого себя.
+        for ($divider = $randNum - 1; $divider > 1; $divider--) {
+            if ($randNum % $divider === 0) {
+                $result = 'no';
+                break;
+            } else {
+                $result = 'yes';
+            }
+        } 
+
+        line("Question: {$randNum}");
+        $userAnswer = prompt('Your answer');
+
+        if ($userAnswer === $result) {
+            line('Correct!');
+        } else {
+            return line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$result}'. Let's try again, %s!", $name);
+        }
+    } return line('Congratulations, %s!', $name);
+}
